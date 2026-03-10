@@ -37,6 +37,8 @@ def PSO_single_optimization(drones, Groups, users):
             print("有没必要去服务的组")
             g.drone_k.serve_group = [group for group in g.drone_k.serve_group if group != g]
             g.drone_k = None
+            for u in g.users:
+                u.alpha = 0
     satisfaction = total_satisfaction(Groups)
     print("最后一次输出：", calculate_satisfaction_by_drones(drones))
     return drones, satisfaction
