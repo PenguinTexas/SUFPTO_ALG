@@ -37,7 +37,7 @@ def instance_test(drone_b, drone_Energy, user_Computing_power, drone_Computing_p
                                     desired_part = file_directory.split('/')
                                     content_name = desired_part[1] + f'_{desired_part[2]}'
                                     Argument = desired_part[1].split('_')
-                                    content = [content_name] + ['GA'] + Argument + [f'{satisfaction:.1f}'] + [
+                                    content = [content_name] + ['JTO-USOA'] + Argument + [f'{satisfaction:.1f}'] + [
                                         f"{time.time() - start:.0f}"]
                                     # # 使用'a'模式打开文件以进行追加写入
                                     # 直接全部保存到一个文件
@@ -54,3 +54,4 @@ if __name__ == '__main__':
     user_number = [50, 100, 150, 200]
     instance_test(drone_B, drone_energy, user_computing_power, drone_computing_power, drone_velocity, drone_number,
                   user_number)
+
